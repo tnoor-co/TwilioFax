@@ -1,0 +1,23 @@
+{
+  "name": "twiliofax",
+  "version": "1.0.0",
+  "private": true,
+  "author": "TJ Noor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tnoor-co/twiliofax.git"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^4.7.0",
+    "cloudinary": "^1.21.0",
+    "route-parser": "0.0.5",
+    "twilio": "3.42.2"
+  },
+  "cloud-repo-tools": {
+    "requiresKeyFile": true,
+    "requiresProjectId": true
+  }
+}
