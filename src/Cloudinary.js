@@ -9,17 +9,14 @@ module.exports = {
     });
 
     try {
-      let imageUrl = "";
       await cloudinary.uploader.upload(url, function (error, result) {
         if (error) {
           console.log(error);
-          imageUrl = null;
+          return null;
         }
 
-        imageUrl = result.secure_url;
+        return result.secure_url;
       });
-
-      return imageUrl;
     } catch (err) {
       console.log(err);
       return null;
