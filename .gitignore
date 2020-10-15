@@ -1,5 +1,8 @@
 # Configuration Files
 .env.yaml
+.firebaserc
+firebase.json
+.runtimeconfig.json
 
 # Logs
 logs
