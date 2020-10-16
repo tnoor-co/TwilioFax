@@ -1,7 +1,7 @@
 {
   "name": "devphone",
   "description": "Functions to help power Internet Phones",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "TJ Noor",
   "repository": {
     "type": "git",

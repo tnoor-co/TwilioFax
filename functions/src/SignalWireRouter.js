@@ -24,16 +24,10 @@ module.exports = {
           res.setHeader("Content-Type", "application/json");
           if (req.body.MediaUrl == null || req.body.MediaUrl == undefined) {
             await SignalWire.sendFaxStatusUpdate(
-              `No fax content was received from ${req.body.From}`
+              `No fax content was received from ${req.body.From}.\n\nFax Status: ${req.body.FaxStatus}.\nError Message: ${req.body.ErrorMessage}`
             );
-
-            return res
-              .status(200)
-              .send({
-                message:
-                  "MediaUrl was not provided indicating that this wasn't a fax or an error has occurred.",
-              })
-              .end();
+            res.status(200).send().end();
+            return;
           }
 
           const imageUrl = await Cloudinary.uploadFile(req.body.MediaUrl);
